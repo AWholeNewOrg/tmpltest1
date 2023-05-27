@@ -1,0 +1,10 @@
+#!/bin/sh
+#/ script/tmpltest1 builds and runs the project with the given arguments.
+
+set -e
+
+CDPATH="" cd -- "$(dirname -- "$0")/.."
+
+go build -o bin/tmpltest1 ./cmd/tmpltest1
+
+exec bin/tmpltest1 "$@"

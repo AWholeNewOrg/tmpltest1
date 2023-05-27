@@ -1,4 +1,4 @@
-package goprojecttmpl
+package tmpltest1
 
 import (
 	"testing"

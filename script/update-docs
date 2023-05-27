@@ -1,5 +1,5 @@
 #!/bin/bash
-#/ script/generate-readme updates README.md with the usage output of script/goproject-tmpl and
+#/ script/generate-readme updates README.md with the usage output of script/tmpltest1 and
 #/ updates CONTRIBUTING.md with script documentation.
 
 set -e
@@ -20,10 +20,10 @@ $end_comment"
   echo "${data//$pattern/$replacement}" >"$file"
 }
 
-if [ -f script/goproject-tmpl ]; then
+if [ -f script/tmpltest1 ]; then
   USAGE_OUTPUT="
 \`\`\`
-$(COLUMNS=100 script/goproject-tmpl --help)
+$(COLUMNS=100 script/tmpltest1 --help)
 \`\`\`
 "
 fi
